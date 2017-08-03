@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app>
+<html ng-app='app'>
   <head>
     <meta charset="utf-8">
     <title>Phone Cat App</title>
@@ -7,8 +7,15 @@
   </head>
   <body>
 
-
-    <p>Nothing here {{'yet' + '!'}}</p>
+    <div ng-controller="appController">
+      <h1>{{name}}</h1>
+      <ul>
+        <li ng-repeat="phone in phones">
+          <h2>{{phone.name}}</h2>
+          <big>{{phone.snippet}}</big>
+        </li>
+      </ul>
+    </div>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
     <script type="text/javascript" src='app.js'></script>
   </body>
